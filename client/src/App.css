@@ -1,0 +1,44 @@
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 20%, var(--video-overlay) 100%);
+  z-index: 1;
+}
+
+.video-background video {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: blur(25px) brightness(0.9) saturate(1.2);
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+/* Ensure data-theme is handled */
+[data-theme='dark'] .video-background video {
+  filter: blur(8px) brightness(0.5);
+}

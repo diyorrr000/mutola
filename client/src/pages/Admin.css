@@ -1,0 +1,220 @@
+.admin-page {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.5rem;
+}
+
+.admin-title {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.admin-title h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.header-actions {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 24px;
+    border-radius: var(--radius-pill);
+    background: var(--glass-bg);
+    color: var(--accent);
+    border: 1.5px solid var(--glass-border);
+    font-weight: 700;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-logout:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.admin-stats-grid {
+    margin-bottom: 3rem;
+}
+
+.admin-stat-card {
+    padding: 2.5rem;
+    border-radius: var(--radius-card);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: fit-content;
+    background: var(--glass-bg);
+    border: 1.5px solid var(--glass-border);
+    box-shadow: var(--shadow);
+}
+
+.admin-stat-card h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.admin-stat-card span {
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.books-table-container {
+    overflow-x: auto;
+    border-radius: var(--radius-card);
+    border: 1.5px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow);
+}
+
+.books-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.books-table th {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.books-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.table-thumb {
+    width: 45px;
+    height: 65px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.table-badge {
+    background: var(--primary);
+    color: white;
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.table-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.action-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.action-btn.edit {
+    color: var(--primary);
+    background: var(--primary-glow);
+    border: 1px solid var(--primary);
+}
+
+.action-btn.delete {
+    color: var(--accent);
+    background: rgba(244, 63, 94, 0.1);
+    border: 1px solid var(--accent);
+}
+
+.action-btn:hover {
+    transform: scale(1.15);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 650px;
+    padding: 3.5rem;
+    border-radius: var(--radius-card);
+    background: var(--glass-bg);
+    backdrop-filter: blur(50px) saturate(220%);
+    border: 2px solid var(--glass-border);
+    box-shadow: var(--shadow-lg);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-group label {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    margin-bottom: 0.25rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 1rem 1.25rem;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid var(--glass-border);
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--primary);
+    outline: none;
+}
